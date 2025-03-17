@@ -2799,10 +2799,6 @@ video {
   width: 100vw;
 }
 
-.w-auto {
-  width: auto;
-}
-
 .min-w-0 {
   min-width: 0px;
 }
@@ -3025,11 +3021,6 @@ video {
   border-color: rgb(209 213 219 / var(--tw-border-opacity, 1));
 }
 
-.border-gray-50 {
-  --tw-border-opacity: 1;
-  border-color: rgb(249 250 251 / var(--tw-border-opacity, 1));
-}
-
 .border-primary-300 {
   --tw-border-opacity: 1;
   border-color: rgb(174 175 248 / var(--tw-border-opacity, 1));
@@ -3037,16 +3028,6 @@ video {
 
 .border-transparent {
   border-color: transparent;
-}
-
-.border-gray-200 {
-  --tw-border-opacity: 1;
-  border-color: rgb(229 231 235 / var(--tw-border-opacity, 1));
-}
-
-.border-gray-900 {
-  --tw-border-opacity: 1;
-  border-color: rgb(17 24 39 / var(--tw-border-opacity, 1));
 }
 
 .border-b-stone-200\/10 {
@@ -3100,16 +3081,6 @@ video {
 .bg-zinc-100 {
   --tw-bg-opacity: 1;
   background-color: rgb(244 244 245 / var(--tw-bg-opacity, 1));
-}
-
-.bg-gray-500 {
-  --tw-bg-opacity: 1;
-  background-color: rgb(107 114 128 / var(--tw-bg-opacity, 1));
-}
-
-.bg-gray-100 {
-  --tw-bg-opacity: 1;
-  background-color: rgb(243 244 246 / var(--tw-bg-opacity, 1));
 }
 
 .bg-center {
@@ -4717,10 +4688,6 @@ EmojiSymbols;
     top: 3rem;
   }
 
-  .lg\:right-8 {
-    right: 2rem;
-  }
-
   .lg\:m-0 {
     margin: 0px;
   }
@@ -4759,10 +4726,6 @@ EmojiSymbols;
     height: 100%;
   }
 
-  .lg\:h-auto {
-    height: auto;
-  }
-
   .lg\:w-1\/2 {
     width: 50%;
   }
@@ -4779,16 +4742,16 @@ EmojiSymbols;
     width: 100vw;
   }
 
+  .lg\:max-w-3xl {
+    max-width: 48rem;
+  }
+
   .lg\:max-w-7xl {
     max-width: 80rem;
   }
 
   .lg\:max-w-none {
     max-width: none;
-  }
-
-  .lg\:max-w-3xl {
-    max-width: 48rem;
   }
 
   .lg\:grid-cols-12 {
@@ -4880,8 +4843,8 @@ EmojiSymbols;
     margin-bottom: 0.5rem;
   }
 
-  .xl\:text-6xl {
-    font-size: 3.75rem;
+  .xl\:text-5xl {
+    font-size: 3rem;
     line-height: 1;
   }
 
@@ -4893,10 +4856,5 @@ EmojiSymbols;
   .xl\:text-xl {
     font-size: 1.25rem;
     line-height: 1.75rem;
-  }
-
-  .xl\:text-5xl {
-    font-size: 3rem;
-    line-height: 1;
   }
 }
