@@ -25,3 +25,20 @@
 {{ $styles := $styles | minify | fingerprint | resources.PostProcess }}
 <link rel="stylesheet" href="{{ $styles.RelPermalink }}" integrity="{{ $styles.Data.Integrity }}" />
 {{ end }}
+<style>
+    .iicontainer { 
+         position: relative; 
+         width: 100%; /* Adjust width as needed */ 
+     } 
+
+     .iitext { 
+         position: absolute; 
+         top: 80%; /* Position text in the center */ 
+         left: 50%; 
+         transform: translate(-50%, -50%); /* Center the text */ 
+         color: white; /* Text color */ 
+         font-size: 48px; /* Text size */ 
+         text-shadow: 2px 2px 1px rgba(0, 0, 0, 0.7); /* Text shadow for better readability */ 
+     }  
+</style>
+ 
