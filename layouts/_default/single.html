@@ -1,6 +1,6 @@
 {{define "main"}}
 <article>
-  <header class="mb-4 bg-primary-600">
+  <header class="mb-4 bg-gray-900">
     <span class="py-96">
       <h1 class="py-16 text-5xl font-black text-center text-white capitalize">
         {{ .Title }}
@@ -9,7 +9,7 @@
   </header>
   <div class="max-w-4xl mx-auto mt-8 mb-2">
     <div class="px-6">
-      {{ with .Params.featured_image }}
+      {{ with .Params.image }}
       {{ with resources.Get . }}
       {{ $small := (.Resize "400x webp q80").RelPermalink }}
       {{ $medium := (.Resize "550x webp q80").RelPermalink }}
@@ -30,5 +30,8 @@
   <div class="max-w-2xl px-6 pt-6 pb-16 mx-auto prose dark:prose-invert dark:text-white">
     {{.Content}}
   </div>
+  {{ range $.Site.Params.products }}
+     {{ if eq .Product $.Params.product }}{{ partial "productright" . }} {{end}}
+  {{end}}
 </article>
 {{end}}

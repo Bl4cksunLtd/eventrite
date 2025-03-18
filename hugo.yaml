@@ -64,7 +64,7 @@ params:
       image: "/images/pages/trailer.png"
       button: 
         label: "DETAILS"
-        link: "/about/"
+        link: "/products/control/"
       intro: "Cost-effective Solar Power - "
       bulletheader: "<strong>Our CCTV trailer consists of</strong>"
       bullets: [
@@ -87,7 +87,7 @@ params:
       image: "images/pages/v-solar.png"
       button: 
         label: "DETAILS"
-        link: "/about/"
+        link: "/products/vsolar/"
       intro: "Cost-effective Solar Power - "
       content:
         - intro: "Cost-effective Solar Power"
