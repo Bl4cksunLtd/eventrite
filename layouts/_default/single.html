@@ -43,13 +43,13 @@
             <div class="md:pt-12 sm:pt-6 lg:pt-20 ">
                 <div class="mt-6 text-gray-900 dark:text-white">
                     <div class="text-lg mt-6 space-y-6 text-gray-900 dark:text-white prose">
-                        <strong>{{ .Params.Bulletheader}}</strong>
-                        <ul><ul><ul>
+                        <h3>{{ .Params.Bulletheader}}</h3>
+                        <ul>
                           {{ range .Params.Bullets }}<li>{{ . }}</li>{{ end }}
-                          </ul></ul></ul>
-                          <ul><ul><ul>
+                          </ul>
+                          <ul>
                           {{ range .Params.Stars }}*{{ . }}<br>{{ end }}
-                          </ul></ul></ul>
+                          </ul>
                     </div>
                 </div>
             </div>
@@ -59,9 +59,9 @@
     
 </div>
 <hr>
-<div class="mt-4 sm:mt-0 sm:ml-3">
+<div class="mt-4 sm:mt-0 sm:ml-3 ">
   {{ with .Params.Bulletfooter }}
-  <div class="max-w-2xl px-6 pt-6 pb-16 mx-auto prose dark:prose-invert dark:text-white">
+  <div class="text-center text-lg max-w-4xl px-6 pt-6 pb-16 mx-auto prose dark:prose-invert dark:text-white">
     {{.}}
   </div>
  {{end}}

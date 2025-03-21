@@ -58,7 +58,7 @@ params:
  
   products:
     - Product: CCTV
-      left: true
+      left: false
       style: "bg-gray-200 dark:bg-gray-900"
       heading: "CCTV"
       image: "/images/pages/trailer.png"
@@ -93,7 +93,7 @@ params:
         - intro: "Cost-effective Solar Power"
         - text: "Our best-selling V-Solar 6m towable CCTV tower has been specifically developed and designed as a cost-effective solution for demanding off-grid security applications. This offers a truly reliable, robust and versatile alternative, when mains or generator power are not available."
     - Product: V-Mini / V-Mini Solar
-      left: true
+      left: false
       style: "bg-gray-200 dark:bg-gray-900"
       heading: "V-Mini / V-Mini Solar"
       image: "images/pages/v-mini-solar.png"
@@ -121,7 +121,7 @@ params:
         - text: "The V-Guard can be used independently or a brilliant addition to your V-Ceptor fleet."
     - Product: V-Ceptor Winter Kits
       heading: "V-Ceptor Winter Kits"
-      left: true
+      left: false
       style: "bg-gray-200 dark:bg-gray-900"
       image: "images/pages/winter-kit-solar.png"
       intro: "Say goodbye to battery swap-outs"

@@ -4265,6 +4265,11 @@ EmojiSymbols;
   background-color: rgb(79 70 229 / var(--tw-bg-opacity, 1));
 }
 
+.dark\:bg-gray-200:is(.dark *) {
+  --tw-bg-opacity: 1;
+  background-color: rgb(229 231 235 / var(--tw-bg-opacity, 1));
+}
+
 .dark\:text-gray-200:is(.dark *) {
   --tw-text-opacity: 1;
   color: rgb(229 231 235 / var(--tw-text-opacity, 1));
@@ -4346,6 +4351,11 @@ EmojiSymbols;
 .dark\:hover\:text-primary-500:hover:is(.dark *) {
   --tw-text-opacity: 1;
   color: rgb(99 102 241 / var(--tw-text-opacity, 1));
+}
+
+.dark\:hover\:invert:hover:is(.dark *) {
+  --tw-invert: invert(100%);
+  filter: var(--tw-blur) var(--tw-brightness) var(--tw-contrast) var(--tw-grayscale) var(--tw-hue-rotate) var(--tw-invert) var(--tw-saturate) var(--tw-sepia) var(--tw-drop-shadow);
 }
 
 .dark\:focus\:border-indigo-500:focus:is(.dark *) {
@@ -4839,6 +4849,10 @@ EmojiSymbols;
 
   .lg\:text-left {
     text-align: left;
+  }
+
+  .lg\:text-center {
+    text-align: center;
   }
 
   .lg\:text-7xl {
