@@ -100,7 +100,7 @@ params:
       intro: "Compact by design -"
       button: 
         label: "DETAILS"
-        link: "/prose/"
+        link: "/products/vmini/"
       content: 
         - intro: "Compact by design"
         - text: "New to the market in 2021, the unique V-Mini/ V-Mini Solar is a user-friendly and compact rapid deployable CCTV tower."
@@ -112,11 +112,11 @@ params:
       intro: "All round protection"
       button: 
         label: "DETAILS"
-        link: "/prose/"
+        link: "/products/vguard/"
       content: 
         - intro: "All round protection"
-        - text: "The new V-Guard with AX Pro by V-Ceptor offers an inexpensive soluon to site security."
-        - text: "Easily deployable by one person, the V-Guard is a reliable and low-cost effective option for a wide range of security applicaons."
+        - text: "The new V-Guard with AX Pro by V-Ceptor offers an inexpensive solution to site security."
+        - text: "Easily deployable by one person, the V-Guard is a reliable and low-cost effective option for a wide range of security applications."
         - text: "Powered by solar and complimented by a battery back-up system, the wireless V-Guard is designed with speed and no fuss in mind, the unit can be deployed rapidly, easily manoeuvred in-to position, then left to do its job."
         - text: "The V-Guard can be used independently or a brilliant addition to your V-Ceptor fleet."
     - Product: V-Ceptor Winter Kits
@@ -127,7 +127,7 @@ params:
       intro: "Say goodbye to battery swap-outs"
       button: 
         label: "DETAILS"
-        link: "/prose/"
+        link: "/products/vceptor/"
       content: 
         - intro: "Say goodbye to battery swap-outs*"
         - text: "Developed and thoroughly tested through Winter 2022 and 2023, our additional solar charging Winter Kits are now available for Winter 2024."
@@ -157,13 +157,14 @@ params:
     content:
       - text: "Lorem ipsum dolor sit amet consectetur, adipisicing elit. Ipsa libero labore natus atque, ducimus sed."
   p5:
-    heading: "Stay Up to Date"
+    heading: "Get in touch"
     content:
-      - text: "Sagittis scelerisque nulla cursus in enim consectetur quam. Dictum urna sed consectetur neque tristique pellentesque."
-    action: "#"
+      - text: "Got a question? We'd love to hear from you. Either use this form, send us an email, give us a call."
+    action: "https://api.web3forms.com/submit"
+    accesskey: "c9fa4d72-da05-4009-b53b-902f450c0ee1"
     label: "Email address"
     placeholder: "Enter your email"
-    button: "Notify me"
+    button: "Contact us"
 
   social_media:
     github:
@@ -189,9 +190,9 @@ params:
     
 menu:
   main:
-    - identifier: prose
-      name: Prose
-      url: /prose/
+    - identifier: home
+      name: Home
+      url: /
       weight: 10
     - identifier: about
       name: About
@@ -239,9 +240,9 @@ menu:
       weight: 30
 
   footer:
-    - identifier: about
-      name: About
-      url: /about/
+    - identifier: home
+      name: Home
+      url: /
       weight: 10
     - identifier: blog
       name: Blog

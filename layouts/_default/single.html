@@ -7,31 +7,96 @@
       </h1>
     </span>
   </header>
-  <div class="max-w-4xl mx-auto mt-8 mb-2">
-    <div class="px-6">
-      {{ with .Params.image }}
-      {{ with resources.Get . }}
-      {{ $small := (.Resize "400x webp q80").RelPermalink }}
-      {{ $medium := (.Resize "550x webp q80").RelPermalink }}
-      {{ $large := (.Resize "900x webp q80").RelPermalink }}
-      {{ $featuredimage := (.Resize "1500x webp q80").RelPermalink }}
-      <img src="{{ $featuredimage }}" srcset="
-        {{- with $small -}}, {{.}} 400w{{- end -}}
-        {{- with $medium -}}, {{.}} 550w{{- end -}}
-        {{- with $large -}}, {{.}} 768w{{- end -}}
-        {{- with $featuredimage -}}, {{.}} 1100w{{- end -}}"
-           class="object-fill overflow-hidden rounded-lg shadow-lg ring-4 ring-zinc-300/40 dark:ring-gray-900/40 shadow-neutral-100/20 dark:shadow-neutral-800/40"
-           width="100%" alt="{{ .Params.title }}" />
-      {{ end }}
-      {{ end }}
-    </div>
-  </div>
-  <!-- " {{.Content}}" pulls from the markdown content of the corresponding _index.md -->
+ 
   <div class="max-w-2xl px-6 pt-6 pb-16 mx-auto prose dark:prose-invert dark:text-white">
     {{.Content}}
   </div>
-  {{ range $.Site.Params.products }}
-     {{ if eq .Product $.Params.product }}{{ partial "productright" . }} {{end}}
-  {{end}}
+  
+  <div class="relative my-4 {{.Params.style}}">
+    <div class="lg:mx-auto lg:grid lg:max-w-7xl lg:grid-cols-2 lg:items-start lg:gap-24 lg:px-8">
+        <div class="relative sm:py-8 lg:py-0">
+            <div aria-hidden="true" class="hidden sm:block lg:absolute lg:inset-y-0 lg:right-0 lg:w-screen">
+                <div class="absolute inset-y-0 w-full bg-gray-50 dark:bg-gray-900/10 right-1/2 rounded-r-3xl lg:right-72"></div><svg class="absolute -ml-3 top-8 left-1/2 lg:-right-8 lg:left-auto lg:top-12" width="404" height="392" fill="none" viewBox="0 0 404 392" loading="lazy">
+                    <defs>
+                        <pattern id="02f20b47-fd69-4224-a62a-4c9de5c763f7" x="0" y="0" width="20" height="20" patternUnits="userSpaceOnUse">
+                            <rect x="0" y="0" width="4" height="4" class="text-gray-200 dark:text-gray-900/60" fill="currentcolor"></rect>
+                        </pattern>
+                    </defs>
+                    <rect width="404" height="392" fill="url(#02f20b47-fd69-4224-a62a-4c9de5c763f7)"></rect>
+                </svg>
+            </div>
+            <div class="relative w-full h-auto px-4 py-6 mx-auto sm:max-w-3xl sm:px-6 lg:px-0 lg:py-20">
+                <div class="overflow-hidden shadow-xl rounded-2xl lg:max-w-3xl">
+                    {{ $p1image := resources.Get .Params.image }}
+                    {{ with $p1image }}
+                    {{ with .Resize (printf "%dx%d webp q90" .Width .Height) }}
+                    <div class = "iicontainer">
+                        <img imgh src="{{ .RelPermalink }}" width="{{ .Width }}" height="{{ .Height }}" class="w-full h-auto" alt="$.heading" loading="lazy" />                            
+                    </div>
+                    {{ end }}
+                    {{ end }}
+                </div>
+                    
+            </div>
+        </div>
+        <div class="relative max-w-md px-4 mx-auto sm:max-w-3xl sm:px-6 lg:px-0">
+            <div class="md:pt-12 sm:pt-6 lg:pt-20 ">
+                <div class="mt-6 text-gray-900 dark:text-white">
+                    <div class="text-lg mt-6 space-y-6 text-gray-900 dark:text-white prose">
+                        <strong>{{ .Params.Bulletheader}}</strong>
+                        <ul><ul><ul>
+                          {{ range .Params.Bullets }}<li>{{ . }}</li>{{ end }}
+                          </ul></ul></ul>
+                          <ul><ul><ul>
+                          {{ range .Params.Stars }}*{{ . }}<br>{{ end }}
+                          </ul></ul></ul>
+                    </div>
+                </div>
+            </div>
+            <br><br>
+        </div>
+      </div>
+    
+</div>
+<hr>
+<div class="mt-4 sm:mt-0 sm:ml-3">
+  {{ with .Params.Bulletfooter }}
+  <div class="max-w-2xl px-6 pt-6 pb-16 mx-auto prose dark:prose-invert dark:text-white">
+    {{.}}
+  </div>
+ {{end}}
+        
+  <center><ul class="actions stacked">
+       <li><a href="/" class="  px-5 py-3 text-base font-medium text-white bg-gray-900 border border-transparent rounded-md shadow hover:bg-black focus:outline-none focus:ring-2 focus:ring-white focus:ring-offset-2 focus:ring-offset-primary-500 sm:px-10">HOME</a></li>
+   </ul></center>
+</div>
+
+<!--
+<div class="max-w-4xl mx-auto mt-8 mb-2">
+  <div class="px-6">
+    {{ with .Params.image }}
+    {{ with resources.Get . }}
+    {{ $small := (.Resize "400x webp q80").RelPermalink }}
+    {{ $medium := (.Resize "550x webp q80").RelPermalink }}
+    {{ $large := (.Resize "900x webp q80").RelPermalink }}
+    {{ $featuredimage := (.Resize "1500x webp q80").RelPermalink }}
+    <img src="{{ $featuredimage }}" srcset="
+      {{- with $small -}}, {{.}} 400w{{- end -}}
+      {{- with $medium -}}, {{.}} 550w{{- end -}}
+      {{- with $large -}}, {{.}} 768w{{- end -}}
+      {{- with $featuredimage -}}, {{.}} 1100w{{- end -}}"
+         class="object-fill overflow-hidden rounded-lg shadow-lg ring-4 ring-zinc-300/40 dark:ring-gray-900/40 shadow-neutral-100/20 dark:shadow-neutral-800/40"
+         width="100%" alt="{{ .Params.title }}" />
+    {{ end }}
+    {{ end }} 
+  </div>
+</div>
+-->    
+<div class="max-w-4xl mx-auto mt-8 mb-2">
+  <div class="px-6">
+{{ partial "carousel.html" . }}
+  </div>
+</div>
+<p class="mt-4"><hr></p>
 </article>
 {{end}}

@@ -1,6 +1,6 @@
 <!-- Product Summary -->
 <div class="overflow-hidden sm:pt-6 lg:relative {{.style}}"> 
-    <div class="max-w-md px-4 mx-auto sm:max-w-3xl sm:px-6 lg:grid lg:max-w-7xl lg:grid-cols-2 lg:gap-12 lg:px-8">
+    <div class="max-w-md px-4 mx-auto sm:max-w-3xl sm:px-6 lg:grid lg:max-w-7xl lg:grid-cols-2 lg:gap-12 lg:px-8 sm:text-center">
         <div>
             <div class="md:mt-8">
                 <div class="mt-6 sm:max-w-xl">
@@ -38,7 +38,7 @@
                 {{ $p2image := resources.Get .image }}
                 {{ with $p2image }}
                 {{ with .Resize (printf "%dx%d webp q90" .Width .Height) }}
-                <img imgh src="{{ .RelPermalink }}" width="{{ .Width }}" height="{{ .Height }}" alt="{{$.heading}}" class="w-full rounded-lg shadow-xl lg:h-full lg:w-auto lg:max-w-none" loading="lazy" />
+                <img imgh src="{{ .RelPermalink }}" width="{{ .Width }}" height="{{ .Height }}" alt="{{$.heading}}" class="w-full rounded-lg shadow-xl lg:h-full lg:w-auto lg:max-w-none " loading="lazy" />
                 {{ end }}
                 {{ end }}
             </div>
