@@ -59,7 +59,7 @@ params:
   products:
     - Product: CCTV
       left: false
-      style: "bg-gray-200 dark:bg-gray-900"
+      style: "bg-gray-200 dark:bg-gray-800"
       heading: "CCTV"
       image: "/images/pages/trailer.png"
       button: 
@@ -185,8 +185,8 @@ params:
       url: "tel:0800 246 5857"
     email:
       enabled: true
-      text: "martyn.weber@bl4cksun.com"
-      url: "mailto:martyn.weber@bl4cksun.com"
+      text: "info@eventrite.uk"
+      url: "mailto:info@eventrite.uk"
     
 menu:
   main:
@@ -194,72 +194,65 @@ menu:
       name: Home
       url: /
       weight: 10
-    - identifier: about
-      name: About
-      url: /about/
+    - identifier: control
+      name: Control Center
+      url: /products/control/
       weight: 20
-    - identifier: categories
+    - identifier: products
       pre: dropdown
-      name: Categories
+      name: Products
       weight: 30
-    - identifier: dropdown
-      pre: complexdropdown
-      name: Dropdown
-      weight: 40
     - identifier: contact
       name: Contact
-      url: /contact/
+      url: "/#cta"
       weight: 50
-  categories:
-    - identifier: prose
-      name: Prose
-      url: /prose/
+  products:
+    - identifier: vsolar
+      name: V-Solar
+      url: /products/vsolar/
       weight: 10
-    - identifier: about
-      name: About
-      url: /about/
+    - identifier: vmini
+      name: V-Mini
+      url: /products/vmini/
       weight: 20
-  dropdown:
-    - identifier: appearance
-      pre: stars # can be stars, comments or piechart
-      name: Appearance
-      post: "Easy customization"
-      url: "#"
-      weight: 10
-    - identifier: comments
-      pre: comments # can be stars, comments or piechart
-      name: Comments
-      post: "Check your latest comments"
-      url: "#"
-      weight: 20
-    - identifier: analytics
-      pre: piechart # can be stars, comments or piechart
-      name: Analytics
-      post: "Take a look at your statistics"
-      url: "#"
+    - identifier: vguard
+      name: V-Guard
+      url: /products/vguard/
       weight: 30
-
+    - identifier: vceptor
+      name: V-Ceptor
+      url: /products/vceptor/
+      weight: 40  
+  
   footer:
     - identifier: home
       name: Home
       url: /
       weight: 10
-    - identifier: blog
-      name: Blog
-      url: /categories/blog/
+    - identifier: control
+      name: Control-Center
+      url: /products/control/
       weight: 20
-    - identifier: news
-      name: News
-      url: /categories/news/
+    - identifier: vsolar
+      name: V-Solar
+      url: /products/vsolar/
       weight: 30
-    - identifier: prose
-      name: Prose
-      url: /prose/
+    - identifier: vmini
+      name: V-Mini
+      url: /products/vmini/
       weight: 40
+    - identifier: vguard
+      name: V-Guard
+      url: /products/vguard/
+      weight: 50
+    - identifier: vceptor
+      name: V-Ceptor
+      url: /products/vceptor/
+      weight: 60  
     - identifier: contact
       name: Contact
-      url: /contact/
-      weight: 50
+      url: "/#cta"
+      weight: 70
 
 markup:
   goldmark:

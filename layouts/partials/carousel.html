@@ -1,5 +1,5 @@
-{{ $height := 50 }}
-{{ $unit := "%" }}
+{{ $height := 500 }}
+{{ $unit := "px" }}
 {{ $items := "1" }}
 {{ $duration := 7000 }}
 <div id="carousel10" class="carousel object-fill overflow-hidden rounded-lg shadow-lg ring-4 ring-zinc-300/40 dark:ring-gray-900/40 shadow-neutral-100/20 dark:shadow-neutral-800/40"  duration="{{ $duration }}" items="{{ $items }}">
@@ -14,16 +14,15 @@
             {{- with $medium -}}, {{.}} 550w{{- end -}}
             {{- with $large -}}, {{.}} 768w{{- end -}}
             {{- with $featuredimage -}}, {{.}} 1100w{{- end -}}" 
-            class="object-fill overflow-hidden rounded-lg shadow-lg ring-4 ring-zinc-300/40 dark:ring-gray-900/40 shadow-neutral-100/20 dark:shadow-neutral-800/40"
             width="100%" alt="{{ .Params.title }}" />
             <div><div>{{ .Params.title }}</div></div></li>
         {{ end }}
     </ul>
     <ol>
       {{ range $index, $page := .Resources.ByType "image" }}
-        <li><a href="#c10_slide{{ add $index 1 }}"></a></li>
+        <li class="bg-black"><a href="#c10_slide{{ add $index 1 }}"></a></li>
       {{ end }}
     </ol>
-    <div class="prev">&lsaquo;</div>
-    <div class="next">&rsaquo;</div>
+    <div class="prev bg-black rounded-lg">&lsaquo;</div>
+    <div class="next bg-black rounded-lg">&rsaquo;</div>
 </div>

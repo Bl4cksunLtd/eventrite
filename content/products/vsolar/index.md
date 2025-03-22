@@ -8,7 +8,7 @@ style: "bg-gray-200 dark:bg-gray-900"
             
 params:
     product: "V-Solar"
-    style: "bg-gray-200 dark:bg-gray-900"
+    style: "bg-gray-200 dark:bg-gray-600"
     subtitle: "V-SOlar"
     bulletheader: "V-Solar Tower Specification"
     bullets: [

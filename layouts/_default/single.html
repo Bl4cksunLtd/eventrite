@@ -43,7 +43,7 @@
             <div class="md:pt-12 sm:pt-6 lg:pt-20 ">
                 <div class="mt-6 text-gray-900 dark:text-white">
                     <div class="text-lg mt-6 space-y-6 text-gray-900 dark:text-white prose">
-                        <h3>{{ .Params.Bulletheader}}</h3>
+                        <h3 class="text-gray-900 dark:text-white">{{ .Params.Bulletheader}}</h3>
                         <ul>
                           {{ range .Params.Bullets }}<li>{{ . }}</li>{{ end }}
                           </ul>
@@ -67,31 +67,9 @@
  {{end}}
         
   <center><ul class="actions stacked">
-       <li><a href="/" class="  px-5 py-3 text-base font-medium text-white bg-gray-900 border border-transparent rounded-md shadow hover:bg-black focus:outline-none focus:ring-2 focus:ring-white focus:ring-offset-2 focus:ring-offset-primary-500 sm:px-10">HOME</a></li>
+       <li><a href="/" class="  px-5 py-3 text-base font-medium text-white dark:text-gray-900 bg-gray-900 dark:bg-gray-200 border border-transparent rounded-md shadow hover:bg-primary-600 dark:hover:invert focus:outline-none focus:ring-2 focus:ring-white focus:ring-offset-2 focus:ring-offset-primary-500 sm:px-10">HOME</a></li>
    </ul></center>
 </div>
-
-<!--
-<div class="max-w-4xl mx-auto mt-8 mb-2">
-  <div class="px-6">
-    {{ with .Params.image }}
-    {{ with resources.Get . }}
-    {{ $small := (.Resize "400x webp q80").RelPermalink }}
-    {{ $medium := (.Resize "550x webp q80").RelPermalink }}
-    {{ $large := (.Resize "900x webp q80").RelPermalink }}
-    {{ $featuredimage := (.Resize "1500x webp q80").RelPermalink }}
-    <img src="{{ $featuredimage }}" srcset="
-      {{- with $small -}}, {{.}} 400w{{- end -}}
-      {{- with $medium -}}, {{.}} 550w{{- end -}}
-      {{- with $large -}}, {{.}} 768w{{- end -}}
-      {{- with $featuredimage -}}, {{.}} 1100w{{- end -}}"
-         class="object-fill overflow-hidden rounded-lg shadow-lg ring-4 ring-zinc-300/40 dark:ring-gray-900/40 shadow-neutral-100/20 dark:shadow-neutral-800/40"
-         width="100%" alt="{{ .Params.title }}" />
-    {{ end }}
-    {{ end }} 
-  </div>
-</div>
--->    
 <div class="max-w-4xl mx-auto mt-8 mb-2">
   <div class="px-6">
 {{ partial "carousel.html" . }}
