@@ -32,11 +32,17 @@ params:
         "V-Solar Tower operation is sunlight dependent and may require additional methods of power support during Winter months (quad solar panel arrangement available)",
         "V-Solar Tower can be remotely programmed to switch load off in the daytime during Winter months, to increase battery charging & performance."
     ]
-    images: 
-        -   image: "/assets/pages/v-solar.png"
-            content_html: "1"
-        -   image: "/assets/pages/screens.png"
-            content_html: "2"
+    technical: [
+        "4 x Hikvision Analytic Cameras (various) 4MP/ 8MP",
+        "External Audio horn",
+        "4 x 256gb Micro SD Cards",
+        "100ah Lithium Batteries",
+        "4G Field Grade Router & LMO Antenna (Dual Sim)",
+        "Battery Charging System (12v)",
+        "400watt Solar Panels and bracket (quad panel & bracket arrangement upon request)",
+        "Victron Solar Components"
+    ]
+
     duration: 7000
     items:  "1"    
     height: "500"

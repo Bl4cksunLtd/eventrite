@@ -1,4 +1,4 @@
-baseURL: ''
+baseURL: 'https://www.eventrite.uk/'
 title: Eventrite
 languageCode: en-gb
 DefaultContentLanguage: en
@@ -51,7 +51,7 @@ params:
   authorimage: ../assets/images/global/author.webp
   og_image: /images/trailer.png
   moto: "CCTV"
-  description: " – We have constructed a stand alone CCTV control room/command centre to get ready for the pending Martyns Law legislation to assist festival organizers to become compliant without the massive financial out lay at the onset of the festival/event We have worked alongside respected rapid deployment CCTV tower manufacturers to design our control room using Bot 5G and Starlink connectivity."
+  description: " – We have constructed a stand alone CCTV control room/command centre to get ready for the pending Martyns Law legislation to assist festival organisers to become compliant without the massive financial out lay at the onset of the festival/event We have worked alongside respected rapid deployment CCTV tower manufacturers to design our control room using Bot 5G and Starlink connectivity."
   intro: "Rapid deployment CCTV control room"
   disable_theme_toggle: false
   disable_stay_uptodate: false
@@ -136,26 +136,7 @@ params:
         - text: "*Solar performance can still vary due to adverse weather/ tower location."
         - text: "*V-Solar Tower can be remotely programmed to switch load off in the daytime during Winter months, to increase battery charging & performance."
         
-  p3:
-    heading: "Backed by world-renowned investors"
-    content:
-      - text: "Sagittis scelerisque nulla cursus in enim consectetur quam. Dictum urna sed consectetur neque tristique pellentesque. Blandit amet, sed aenean erat arcu morbi. Cursus faucibus nunc nisl netus morbi vel porttitor vitae ut. Amet vitae fames senectus vitae."
-    links:
-      - text: Meet our investors and advisors
-        url: "#"
-    logos:
-      - identifier: a
-        image: "images/global/sample-logo.svg"
-        alt: "a"
-      - identifier: b
-      - identifier: c
-      - identifier: d
-      - identifier: e
-      - identifier: f
-  p4:
-    heading: "From the blog"
-    content:
-      - text: "Lorem ipsum dolor sit amet consectetur, adipisicing elit. Ipsa libero labore natus atque, ducimus sed."
+  
   p5:
     heading: "Get in touch"
     content:
@@ -195,7 +176,7 @@ menu:
       url: /
       weight: 10
     - identifier: control
-      name: Control Center
+      name: Control Centre
       url: /products/control/
       weight: 20
     - identifier: products
