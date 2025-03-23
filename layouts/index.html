@@ -33,7 +33,7 @@
                         </p>
                         {{ end }}
                     </div>
-                    <form action="{{ .Site.Params.P5.Action }}" method="POST" class="mt-12 sm:mx-auto sm:flex sm:max-w-lg">
+                    <form id="form" action="{{ .Site.Params.P5.Action }}" method="POST" class="mt-12 sm:mx-auto sm:flex sm:max-w-lg">
                         <div class="flex-1 min-w-0 space-y-6 ">
                             <label for="cta-email" class="sr-only">{{ .Site.Params.P5.Label }}</label>
                             <input id="cta-email" name="email" type="email" required class="block w-full px-5 py-3 text-base text-gray-900 placeholder-gray-500 border border-transparent rounded-md shadow-sm focus:border-transparent focus:outline-none focus:ring-2 focus:ring-white focus:ring-offset-2 focus:ring-offset-primary-500" placeholder="{{ .Site.Params.P5.Placeholder }}">
@@ -51,15 +51,58 @@
                                 <button type="submit" class="block w-full px-5 py-3 text-base font-medium text-white bg-gray-900 border border-transparent rounded-md shadow hover:bg-black focus:outline-none focus:ring-2 focus:ring-white focus:ring-offset-2 focus:ring-offset-primary-500 sm:px-10 ">
                                     {{ .Site.Params.P5.Button }}
                                 </button>
+                                <div id="result"></div>
                             </div>
                         </div>
+                        
                     </form>
                     <!-- Required only if you are using hCaptcha or Advanced File Upload. -->
-                    <script src="https://web3forms.com/client/script.js" async defer></script>
+                <!--   <script src="https://web3forms.com/client/script.js" async defer></script> -->
                 </div>
             </div>
         </div>
     </div>
+    <script>
+        const form = document.getElementById('form');
+        const result = document.getElementById('result');
+
+        form.addEventListener('submit', function(e) {
+        e.preventDefault();
+        const formData = new FormData(form);
+        const object = Object.fromEntries(formData);
+        const json = JSON.stringify(object);
+        result.innerHTML = "Please wait..."
+
+            fetch('https://api.web3forms.com/submit', {
+                    method: 'POST',
+                    headers: {
+                        'Content-Type': 'application/json',
+                        'Accept': 'application/json'
+                    },
+                    body: json
+                })
+                .then(async (response) => {
+                    let json = await response.json();
+                    if (response.status == 200) {
+                        result.innerHTML = json.message;
+                    } else {
+                        console.log(response);
+                        result.innerHTML = json.message;
+                    }
+                })
+                .catch(error => {
+                    console.log(error);
+                    result.innerHTML = "Something went wrong!";
+                })
+                .then(function() {
+                    form.reset();
+                    setTimeout(() => {
+                        result.style.display = "none";
+                    }, 3000);
+                });
+        });
+    </script>
+    
     {{ end }}
 
 </main>
