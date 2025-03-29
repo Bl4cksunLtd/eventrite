@@ -14,14 +14,16 @@
                 </div>
                 <div class="relative w-full h-auto px-4 py-6 mx-auto sm:max-w-3xl sm:px-6 lg:px-0 lg:py-20">
                     <div class="overflow-hidden shadow-xl rounded-2xl lg:max-w-3xl">
-                        {{ $p1image := resources.Get .image }}
-                        {{ with $p1image }}
-                        {{ with .Resize (printf "%dx%d webp q90" .Width .Height) }}
-                        <div class = "iicontainer">
-                            <img imgh src="{{ .RelPermalink }}" width="{{ .Width }}" height="{{ .Height }}" class="w-full h-auto" alt="$.heading" loading="lazy" />                            
-                        </div>
-                        {{ end }}
-                        {{ end }}
+                        {{with .button}}<a href="{{.link}}">{{end}}
+                            {{ $p1image := resources.Get .image }}
+                            {{ with $p1image }}
+                            {{ with .Resize (printf "%dx%d webp q90" .Width .Height) }}
+                            <div class = "iicontainer">
+                                <img imgh src="{{ .RelPermalink }}" width="{{ .Width }}" height="{{ .Height }}" class="w-full h-auto" alt="$.heading" loading="lazy" />                            
+                            </div>
+                            {{ end }}
+                            {{ end }}
+                        </a>
                     </div>
                         
                 </div>

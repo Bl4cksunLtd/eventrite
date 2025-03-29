@@ -129,12 +129,10 @@ params:
         label: "DETAILS"
         link: "/products/vceptor/"
       content: 
-        - intro: "Say goodbye to battery swap-outs*"
+        - intro: "Say goodbye to battery swap-outs"
         - text: "Developed and thoroughly tested through Winter 2022 and 2023, our additional solar charging Winter Kits are now available for Winter 2024."
         - text: "Designed to maximise solar consumption and help maintain battery levels on the shortest of days, the new Winter Kits can help boost your tower solar performance throughout the darker Winter months."
         - text: "Available for V-Solar 6m or V-Mini Solar 2.3m or 3.4m."
-        - text: "*Solar performance can still vary due to adverse weather/ tower location."
-        - text: "*V-Solar Tower can be remotely programmed to switch load off in the daytime during Winter months, to increase battery charging & performance."
         
   
   p5:
@@ -188,22 +186,26 @@ menu:
       url: "/#cta"
       weight: 50
   products:
+    - identifier: summary
+      name: Summary
+      url: /products/
+      weight: 10
     - identifier: vsolar
       name: V-Solar
       url: /products/vsolar/
-      weight: 10
+      weight: 20
     - identifier: vmini
       name: V-Mini
       url: /products/vmini/
-      weight: 20
+      weight: 30
     - identifier: vguard
       name: V-Guard
       url: /products/vguard/
-      weight: 30
+      weight: 40
     - identifier: vceptor
       name: V-Ceptor
       url: /products/vceptor/
-      weight: 40  
+      weight: 50  
   
   footer:
     - identifier: home
