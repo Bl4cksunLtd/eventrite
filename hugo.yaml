@@ -56,10 +56,16 @@ params:
   disable_theme_toggle: false
   disable_stay_uptodate: false
  
+  consent:
+    - title: Google Anaytics (functional)
+      description: We use cookies to help us improve our website, allowing us to understand the number of people that visit our website, where they are from and what they are clicking on. We follow the guidelines of the EU and GDPR, which describe how to use Google Analytics without requiring explicit consent.
+      is_functional: true
+      script_file: ga.js
+    
   products:
     - Product: CCTV
       left: false
-      style: "bg-gray-200 dark:bg-gray-800"
+      style: "bg-gray-200 dark:bg-gray-900"
       heading: "CCTV"
       image: "/images/pages/trailer.png"
       button: 
@@ -150,8 +156,8 @@ params:
       enabled: false
       url: 'https://github.com/nusserstudios'
     facebook:
-      enabled: false
-      url: 'https://facebook.com/nusserstudios'
+      enabled: true
+      url: 'https://www.facebook.com/profile.php?id=100082874335784'
     instagram:
       enabled: false
       url: 'https://instagram.com/nusserstudios'
