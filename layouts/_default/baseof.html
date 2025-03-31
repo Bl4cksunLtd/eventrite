@@ -9,8 +9,10 @@
     {{ partial "nav.html" . }}
     {{ block "main" . }}{{ end }}
     {{ partial "footer" . }}
+    
     <script type="text/javascript" src="/js/carousel.js"></script>
     <link rel="stylesheet" href="/css/carousel.css">
+    {{ partial "consent.html" . }}
 </body>
 
 </html>
