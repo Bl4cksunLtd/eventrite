@@ -4,7 +4,7 @@ title: "V-Ceptor Winter Kits"
 date: 2025-03-17T23:22:20Z
 image: "../assets/images/pages/winter-kit-solar.png"
 params:
-    product: "V-Ceptor Winter Kits"
+    heading: "V-Ceptor Winter Kits"
     style: "bg-gray-200 dark:bg-gray-900"
     subtitle: "CCTV"
     bulletheader: "V-Ceptor Winter Kits Specification"

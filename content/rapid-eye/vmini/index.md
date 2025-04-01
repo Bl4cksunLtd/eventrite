@@ -4,7 +4,7 @@ title: "V-Mini / V-Mini Solar"
 date: 2025-03-17T23:22:20Z
 image: "../assets/images/pages/v-mini.png"
 params:
-    product: "V-Mini"
+    heading: "V-Mini"
     style: "bg-gray-200 dark:bg-gray-900"
     bulletheader: "V-Mini / V-Mini Solar Tower Specification"
     bullets: [

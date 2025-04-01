@@ -7,9 +7,9 @@ heading: "V-Solar"
 style: "bg-gray-200 dark:bg-gray-900"
             
 params:
-    product: "V-Solar"
+    heading: "V-Solar"
     style: "bg-gray-200 dark:bg-gray-600"
-    subtitle: "V-SOlar"
+    subtitle: "V-Solar"
     bulletheader: "V-Solar Tower Specification"
     bullets: [
         "6m tower height when deployed",

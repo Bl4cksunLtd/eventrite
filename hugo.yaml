@@ -50,8 +50,8 @@ params:
   author: Martyn Weber
   authorimage: ../assets/images/global/author.webp
   og_image: /images/trailer.png
-  moto: "CCTV"
-  description: " – We have constructed a stand alone CCTV control room/command centre to get ready for the pending Martyns Law legislation to assist festival organisers to become compliant without the massive financial out lay at the onset of the festival/event We have worked alongside respected rapid deployment CCTV tower manufacturers to design our control room using Bot 5G and Starlink connectivity."
+  moto: "Your Trusted Partner in Event & Licensed Premises Security"
+  description: "At Eventrite, we specialize in providing professional manned guarding and state-of-the-art rapid deployment CCTV solutions for the event and licensed premises industry. With years of experience securing festivals, nightlife venues, and public events, we understand the unique challenges of crowd control, safety, and asset protection."
   intro: "Rapid deployment CCTV control room"
   disable_theme_toggle: false
   disable_stay_uptodate: false
@@ -62,15 +62,15 @@ params:
       is_functional: true
       script_file: ga.js
     
-  products:
+  rapideye:
     - Product: CCTV
       left: false
-      style: "bg-gray-200 dark:bg-gray-900"
+      style1: "bg-gray-200 dark:bg-gray-900"
       heading: "CCTV"
       image: "/images/pages/trailer.png"
       button: 
         label: "DETAILS"
-        link: "/products/control/"
+        link: "/rapid-eye/control/"
       intro: "Cost-effective Solar Power - "
       bulletheader: "<strong>Our CCTV trailer consists of</strong>"
       bullets: [
@@ -93,20 +93,20 @@ params:
       image: "images/pages/v-solar.png"
       button: 
         label: "DETAILS"
-        link: "/products/vsolar/"
+        link: "/rapid-eye/vsolar/"
       intro: "Cost-effective Solar Power - "
       content:
         - intro: "Cost-effective Solar Power"
         - text: "Our best-selling V-Solar 6m towable CCTV tower has been specifically developed and designed as a cost-effective solution for demanding off-grid security applications. This offers a truly reliable, robust and versatile alternative, when mains or generator power are not available."
     - Product: V-Mini / V-Mini Solar
       left: false
-      style: "bg-gray-200 dark:bg-gray-900"
+      style1: "bg-gray-200 dark:bg-gray-900"
       heading: "V-Mini / V-Mini Solar"
       image: "images/pages/v-mini-solar.png"
       intro: "Compact by design -"
       button: 
         label: "DETAILS"
-        link: "/products/vmini/"
+        link: "/rapid-eye/vmini/"
       content: 
         - intro: "Compact by design"
         - text: "New to the market in 2021, the unique V-Mini/ V-Mini Solar is a user-friendly and compact rapid deployable CCTV tower."
@@ -118,7 +118,7 @@ params:
       intro: "All round protection"
       button: 
         label: "DETAILS"
-        link: "/products/vguard/"
+        link: "/rapid-eye/vguard/"
       content: 
         - intro: "All round protection"
         - text: "The new V-Guard with AX Pro by V-Ceptor offers an inexpensive solution to site security."
@@ -128,25 +128,55 @@ params:
     - Product: V-Ceptor Winter Kits
       heading: "V-Ceptor Winter Kits"
       left: false
-      style: "bg-gray-200 dark:bg-gray-900"
+      style1: "bg-gray-200 dark:bg-gray-900"
       image: "images/pages/winter-kit-solar.png"
       intro: "Say goodbye to battery swap-outs"
       button: 
         label: "DETAILS"
-        link: "/products/vceptor/"
+        link: "/rapid-eye/vceptor/"
       content: 
         - intro: "Say goodbye to battery swap-outs"
         - text: "Developed and thoroughly tested through Winter 2022 and 2023, our additional solar charging Winter Kits are now available for Winter 2024."
         - text: "Designed to maximise solar consumption and help maintain battery levels on the shortest of days, the new Winter Kits can help boost your tower solar performance throughout the darker Winter months."
         - text: "Available for V-Solar 6m or V-Mini Solar 2.3m or 3.4m."
         
-  
+  p1:
+    heading: "Manned Guarding"
+    image: "images/pages/manned-guarding.png"
+    content:
+      - text: "Highly trained security professionals ensuring safety, crowd management, and access control at your event or venue."
+  p2:
+    heading: "Rapid Deployment CCTV"
+    image: "/images/pages/trailer.png"
+    content:
+      - text: "Advanced mobile surveillance units that can be deployed quickly, offering real-time monitoring and deterrence."
+  p3:
+    heading: "Backed by world-renowned investors"
+    content:
+      - text: "Sagittis scelerisque nulla cursus in enim consectetur quam. Dictum urna sed consectetur neque tristique pellentesque. Blandit amet, sed aenean erat arcu morbi. Cursus faucibus nunc nisl netus morbi vel porttitor vitae ut. Amet vitae fames senectus vitae."
+    links:
+      - text: Meet our investors and advisors
+        url: "#"
+    logos:
+      - identifier: a
+        image: "images/global/sample-logo.svg"
+        alt: "a"
+      - identifier: b
+      - identifier: c
+      - identifier: d
+      - identifier: e
+      - identifier: f
+  p4:
+    heading: "From the blog"
+    content:
+      - text: "Lorem ipsum dolor sit amet consectetur, adipisicing elit. Ipsa libero labore natus atque, ducimus sed."
   p5:
     heading: "Get in touch"
     content:
-      - text: "Got a question? We'd love to hear from you. Either use this form, send us an email, give us a call."
+      - text: "Whether you need security for a festival, corporate event, or licensed premises, Eventrite is here to help. Contact us today to discuss your security needs."
     action: "https://api.web3forms.com/submit"
-    accesskey: "c9fa4d72-da05-4009-b53b-902f450c0ee1"
+    accesskey1: "c9fa4d72-da05-4009-b53b-902f450c0ee1"
+    accesskey:  "b689daf6-e227-4af2-b510-91dcbf6a9834"
     label: "Email address"
     placeholder: "Enter your email"
     button: "Contact us"
@@ -181,36 +211,36 @@ menu:
       weight: 10
     - identifier: control
       name: Control Centre
-      url: /products/control/
+      url: /rapid-eye/control/
       weight: 20
-    - identifier: products
+    - identifier: rapid-eye
       pre: dropdown
-      name: Products
+      name: Rapid Eye
       weight: 30
     - identifier: contact
       name: Contact
       url: "/#cta"
       weight: 50
-  products:
+  rapid-eye:
     - identifier: summary
       name: Summary
-      url: /products/
+      url: /rapid-eye/
       weight: 10
     - identifier: vsolar
       name: V-Solar
-      url: /products/vsolar/
+      url: /rapid-eye/vsolar/
       weight: 20
     - identifier: vmini
       name: V-Mini
-      url: /products/vmini/
+      url: /rapid-eye/vmini/
       weight: 30
     - identifier: vguard
       name: V-Guard
-      url: /products/vguard/
+      url: /rapid-eye/vguard/
       weight: 40
     - identifier: vceptor
       name: V-Ceptor
-      url: /products/vceptor/
+      url: /rapid-eye/vceptor/
       weight: 50  
   
   footer:
@@ -220,23 +250,23 @@ menu:
       weight: 10
     - identifier: control
       name: Control-Center
-      url: /products/control/
+      url: /rapid-eye/control/
       weight: 20
     - identifier: vsolar
       name: V-Solar
-      url: /products/vsolar/
+      url: /rapid-eye/vsolar/
       weight: 30
     - identifier: vmini
       name: V-Mini
-      url: /products/vmini/
+      url: /rapid-eye/vmini/
       weight: 40
     - identifier: vguard
       name: V-Guard
-      url: /products/vguard/
+      url: /rapid-eye/vguard/
       weight: 50
     - identifier: vceptor
       name: V-Ceptor
-      url: /products/vceptor/
+      url: /rapid-eye/vceptor/
       weight: 60  
     - identifier: contact
       name: Contact
@@ -254,7 +284,7 @@ taxonomies:
 
 privacy:
   disqus:
-    disable: false
+    disable: true
   googleAnalytics:
     anonymizeIP: true
     disable: false
