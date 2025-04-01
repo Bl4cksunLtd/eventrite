@@ -4,7 +4,7 @@ title: "V-Guard"
 date: 2025-03-17T23:22:20Z
 image: "../assets/images/pages/v-guard.png"
 params:
-    product: "V-Guard"
+    heading: "V-Guard"
     style: "bg-gray-200 dark:bg-gray-900"
     bulletheader: "V-Guard Specification"
     bullets: [

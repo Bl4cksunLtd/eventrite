@@ -6,6 +6,7 @@ image: "../assets/images/pages/trailer.png"
 date: 2025-03-17T23:20:43Z
 product: control
 params:
+    heading: "CCTV Rapid Deployment Trailer"
     product: "CCTV"
     style: "bg-gray-200 dark:bg-gray-900"
     subtitle: "CCTV"

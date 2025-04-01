@@ -13,7 +13,15 @@
             {{- . -}}
         </div>
         {{ end }}
-        {{ partial "posts-template.html" . }}
+        {{ range .Site.Params.rapideye }}
+            {{ if .left}}{{ partial "productleft" . }}
+
+            <!-- Our mission section -->
+            {{else}}{{ partial "productright" . }}
+            {{end}}
+            <!-- JITsection -->
+            <!-- {{ partial "productleft" .Site.Params.P2 }} -->
+        {{end}}
     </article>
     <div class="max-w-xl mx-auto my-16">
         {{ partial "pagination" . }}

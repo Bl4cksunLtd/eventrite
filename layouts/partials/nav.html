@@ -1,12 +1,12 @@
 <div class="top-0 z-50 w-full text-gray-500 bg-gray-900 border-2 border-gray-300 md:sticky border-b-stone-200/10">
     <div x-data="{ open: false }" class="flex flex-col flex-grow max-w-full px-4 mx-auto md:items-center md:justify-between md:flex-row md:px-6 lg:px-8">
         <div class="flex flex-col flex-grow max-w-full items-center justify-between p-4">
-            <a href="/" class="verticaleItemImage flex text-gray-900 transition duration-1000 ease-in-out group">
+            <a href="/" class="verticalItemImage flex text-gray-900 transition duration-1000 ease-in-out group">
                 <div class="verticalItemImage"> <img src="/images/site-logo.svg" class="transition-opacity h-full w-full group-hover:opacity-50 group-focus:opacity-70" alt="{{ .Site.Title }} Logo" /></div>
                 <div class="verticleItemText mt-6 ml-3 text-5xl font-bold tracking-tight text-gray-300  transition-colors group-hover:text-gray-400/60">
                     {{ .Site.Title }}
                     <div class="mb-2 ml-3 text-3xl italic font-light tracking-tight text-gray-400 transition-colors group-hover:text-gray-200/60">
-                        Rapid Eye Ltd</div>
+                        {{.Title}}</div>
                 </div>
             </a>
             <button class="rounded-lg md:hidden focus:outline-none focus:shadow-outline" @click="open = !open" role="navigation" aria-expanded="false" aria-label="Main" aria-controls="menuItems">
