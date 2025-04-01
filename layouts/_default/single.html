@@ -31,7 +31,7 @@
                     {{ with $p1image }}
                     {{ with .Resize (printf "%dx%d webp q90" .Width .Height) }}
                     <div class = "iicontainer">
-                        <img imgh src="{{ .RelPermalink }}" width="{{ .Width }}" height="{{ .Height }}" class="w-full h-auto" alt="$.heading" loading="lazy" />                            
+                        <img imgh src="{{ .RelPermalink }}" width="{{ .Width }}" height="{{ .Height }}" class="w-full h-auto" alt="{{$.Params.heading}}" loading="lazy" />                            
                     </div>
                     {{ end }}
                     {{ end }}
