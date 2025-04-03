@@ -31,14 +31,39 @@
             position: absolute; /* Position the background text */
             /*bottom: 0;*/ /* At the bottom. Use top:0 to append it to the top */
             background: rgb(0, 0, 0); /* Fallback color */
-            background: rgba(0, 0, 0, 0.4); /* Black background with 0.5 opacity */
+            background: rgba(0, 0, 0, 0.5); /* Black background with 0.5 opacity */
             color: #f1f1f1; /* Grey text */
             width: 100%; /* Full width */
             /*padding: 20px; *//* Some padding */
             top: 50%;
             left: 50%;
             transform: translate(-50%, -50%);
-        }  
+        } 
+
+        .ul.tick-list {
+            list-style: none;
+            padding-left: 0;
+        }
+
+        ul.tick-list li {
+            list-style: none;
+            padding-left: 3em;
+            margin-bottom: 0.5em;
+            position: relative;
+        }
+
+        ul.tick-list li::before {
+            content: '';
+            position: absolute;
+            left: 0;
+            top: 0px;
+            width: 2em;
+            height: 2em;
+            background-repeat: no-repeat;
+            background-size: contain;
+            background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' xml:space='preserve' viewBox='0 0 47.5 47.5'%3E%3Cdefs%3E%3CclipPath id='a'%3E%3Cpath d='M0 38h38V0H0v38z'/%3E%3C/clipPath%3E%3C/defs%3E%3Cg fill='green' clip-path='url(%23a)' transform='matrix(1.25 0 0 -1.25 0 47.5)'%3E%3Cg transform='translate(37 5)'%3E%3Cpath d='M-32 32c-2.209 0-4-1.791-4-4V0c0-2.209 1.791-4 4-4h28c2.209 0 4 1.791 4 4v28c0 2.209-1.791 4-4 4h-28z'/%3E%3Cpath fill='%23fff' d='M-7 23.5c.6397496 0 1.2865-.237 1.775-.725.976-.977.976-2.573 0-3.55l-15.5-15.5C-21.213 3.237-21.86 3-22.5 3c-.64 0-1.287.237-1.775.725l-6.5 6.5c-.976.977-.976 2.573 0 3.55.976.976 2.574.976 3.55 0l4.725-4.75 13.725 13.75c.4885.488 1.1352504.725 1.775.725z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E");
+            background-image1: url("data:image/svg+xml;utf8,<?xml version='1.0' encoding='utf-8'?><svg aria-hidden='true' focusable='false' data-prefix='fas' data-icon='check-circle' class='svg-inline--fa fa-check-circle fa-w-16' role='img' xmlns='http://www.w3.org/2000/svg' viewBox='0 0 512 512'><path fill='%2315aabf' d='M504 256c0 136.967-111.033 248-248 248S8 392.967 8 256 119.033 8 256 8s248 111.033 248 248zM227.314 387.314l184-184c6.248-6.248 6.248-16.379 0-22.627l-22.627-22.627c-6.248-6.249-16.379-6.249-22.628 0L216 308.118l-70.059-70.059c-6.248-6.248-16.379-6.248-22.628 0l-22.627 22.627c-6.248 6.248-6.248 16.379 0 22.627l104 104c6.249 6.249 16.379 6.249 22.628.001z'></path></svg>");
+        }
     </style>
     <div class="bg-gray-700 herocontainer">
         <div>
@@ -48,7 +73,7 @@
             <img srcset="
                 {{- with $thumb.RelPermalink -}}{{.}} 400w{{- end -}}
                 {{- with $large.RelPermalink -}}, {{.}} 576w{{- end -}}" src="{{ $hero.RelPermalink }}" width="100%" height="auto" alt="Eventrite hero image" class="rounded-lg bg-image" />
-            <div class="text-6xl text-gray-200 herocontent">
+            <div class="text-5xl lg:text-6xl sm:text-4xl text-gray-200 herocontent">
                 <center>{{.Site.Params.Moto}}</center>
             </div>
         </div>
@@ -57,7 +82,7 @@
         <div class="max-w-screen-xl px-4 py-8 mx-auto">
             <div class="grid items-center gap-8 mb-8 sm:mb-0 lg:gap-12 lg:grid-cols-12">
                 <div class="col-span-6 px-4 text-center sm:mb-6 lg:text-left lg:mb-0">
-                    <h1 class="mb-2 text-4xl font-extrabold leading-none tracking-tight text-gray-900 md:text-5xl xl:text-6xl dark:text-white">
+                    <h1 class="mb-2 text-5xl font-extrabold leading-none tracking-tight text-gray-900 md:text-5xl lg:text-7xl dark:text-white">
                         {{ .Site.Title }}
                     </h1>
                     <h2 class="pb-2 text-3xl font-light text-gray-800 dark:text-gray-300 md:text-4xl">
@@ -68,14 +93,15 @@
                     </p>
                 </div>
                 <div class="col-span-6">
-                    {{ $hero := resources.GetMatch "images/global/trailer inside.jpg" }}
+                    {{ $hero := resources.GetMatch .Site.Params.Heroimage }}
 
                     {{ $thumb := ($hero.Resize "533x400 webp q90") }}
                     {{ $large := ($hero.Resize "768x576 webp q90") }}
 
                     <img srcset="
                         {{- with $thumb.RelPermalink -}}{{.}} 400w{{- end -}}
-                        {{- with $large.RelPermalink -}}, {{.}} 576w{{- end -}}" src="{{ $hero.RelPermalink }}" width="100%" height="" alt="Eventrite CCTV trailer" class="w-full max-w-xl mx-auto rounded-lg" />
+                        {{- with $large.RelPermalink -}}, {{.}} 576w{{- end -}}" 
+                        src="{{ $hero.RelPermalink }}" width="100%" height="" alt="Eventrite CCTV trailer" class="w-full max-w-xl mx-auto rounded-lg" />
                 </div>
             </div>
         </div>
@@ -83,7 +109,7 @@
 
     <!-- More main page content here... -->
 
-    <!-- Our mission section -->
+    <!-- Our services -->
     <div class="relative my-4">
         <div class="lg:mx-auto lg:grid lg:max-w-7xl lg:grid-cols-2 lg:items-center lg:gap-24 lg:px-8">
             <div class="relative sm:py-8 lg:py-0">
@@ -114,12 +140,15 @@
                         {{ .Site.Params.P1.Heading }}
                     </h2>
                     <div class="mt-6 text-gray-900 dark:text-white">
-                        <div class="mt-6 space-y-6 text-gray-900 dark:text-white">
-                            {{ range .Site.Params.P1.Content }}
-                            <p class="text-lg text-gray-900 dark:text-white">
-                                {{ .text }}
-                            </p>
-                            {{ end }}
+                        <div class="mt-6 space-y-6 text-gray-900 dark:text-white prose">
+                            <ul class="tick-list">
+                                {{ range $.Site.Params.P1.Content }} 
+                                    {{ range $v := . }} 
+                                        <li ><b>{{$v.head}}</b> - {{$v.text}}</li>
+                                    {{end}}
+                                {{end}}
+                            </ul>
+                            
                         </div>
                     </div>
                 </div>
@@ -127,60 +156,71 @@
         </div>
     </div>
 
-    <!-- JITsection -->
-    <div class="overflow-hidden sm:pt-6 lg:relative">
-        <div class="max-w-md px-4 mx-auto sm:max-w-3xl sm:px-6 lg:grid lg:max-w-7xl lg:grid-cols-2 lg:gap-12 lg:px-8">
-            <div>
-                <div class="md:mt-8">
-                    <div class="mt-6 sm:max-w-xl">
-                        <h2 class="text-3xl font-extrabold tracking-tight text-gray-900 dark:text-white sm:text-4xl md:mt-16">
-                            {{ .Site.Params.P2.Heading }}
-                        </h2>
-                        {{ range .Site.Params.P2.Content }}
-                        <p class="pb-12 mt-6 text-lg text-gray-900 dark:text-white">
-                            {{ .text }}
-                        </p>
-                        {{ end }}
-                        </p>
-                    </div>
+    <!-- why choose us -->
+    <div class="bg-gray-200 dark:bg-gray-900">
+        <div class="max-w-screen-xl px-4 py-8 mx-auto">
+            <div class="grid items-center gap-8 mb-8 sm:mb-0 lg:gap-12 lg:grid-cols-12">
+                <div class="col-span-6 px-4 text-center sm:mb-6 lg:text-left lg:mb-0 ">
+                    <h2 class="text-left text-3xl font-extrabold tracking-tight text-gray-900 dark:text-white sm:text-4xl md:mt-16">
+                        {{ .Site.Params.P2.Heading }}
+                    </h2>
+                    <div class="mt-6 text-gray-900 dark:text-white text-left">
+                        <div class="text-left mt-6 space-y-6 text-gray-900 dark:text-white prose">
+                    
+                    <ul class="tick-list">
+                        {{ range .Site.Params.P2.Content }} 
+                            {{ range $v := . }} 
+                                <li><b>{{$v.head}}</b> - {{$v.text}}</li>
+                            {{end}}
+                        {{end}}
+                    </ul> </div></div>
                 </div>
-            </div>
-        </div>
-        <div class="sm:mx-auto sm:max-w-3xl sm:px-6">
-            <div class="md:py-12 sm:relative sm:mt-12 lg:absolute lg:inset-y-0 lg:right-0 lg:w-1/2">
-                <div class="hidden sm:block">
-                    <div class="absolute inset-y-0 w-screen left-1/2 rounded-l-3xl bg-gray-50 dark:bg-gray-900/10 lg:left-80 lg:right-0 lg:w-full"></div><svg class="absolute -mr-3 top-8 right-1/2 lg:left-0 lg:m-0" width="404" height="392" fill="none" viewBox="0 0 404 392" loading="lazy">
-                        <defs>
-                            <pattern id="837c3e70-6c3a-44e6-8854-cc48c737b659" x="0" y="0" width="20" height="20" patternUnits="userSpaceOnUse">
-                                <rect x="0" y="0" width="4" height="4" class="text-gray-200 dark:text-gray-900/60" fill="currentcolor"></rect>
-                            </pattern>
-                        </defs>
-                        <rect width="404" height="392" fill="url(#837c3e70-6c3a-44e6-8854-cc48c737b659)"></rect>
-                    </svg>
-                </div>
-                <div class="relative pl-4 -mr-40 sm:mx-auto sm:max-w-3xl sm:px-0 lg:h-full lg:max-w-none lg:pl-12">
-                    {{ $p2image := resources.Get .Site.Params.P2.Image }}
-                    {{ with $p2image }}
-                    {{ with .Resize (printf "%dx%d webp q90" .Width .Height) }}
-                    <img imgh src="{{ .RelPermalink }}" width="{{ .Width }}" height="{{ .Height }}" alt="p2" class="w-full rounded-lg shadow-xl lg:h-full lg:w-auto lg:max-w-none" loading="lazy" />
-                    {{ end }}
-                    {{ end }}
+                <div class="col-span-6">
+                    {{ $image := resources.Get .Site.Params.P2.Image }}
 
+                    {{ $thumb := ($image.Resize "533x400 webp q90") }}
+                    {{ $large := ($image.Resize "768x576 webp q90") }}
+
+                    <img srcset="
+                        {{- with $thumb.RelPermalink -}}{{.}} 400w{{- end -}}
+                        {{- with $large.RelPermalink -}}, {{.}} 576w{{- end -}}" 
+                        src="{{ $hero.RelPermalink }}" width="100%" height="" alt="{{.Site.Params.P2.Heading}} image" class="w-full max-w-xl mx-auto rounded-lg" />
+                    
                 </div>
             </div>
         </div>
     </div>
 
+     
 
-    <!-- Sponsors section -->
+
+    <!-- Events section -->
     <div class="max-w-md px-4 mx-auto md:pt-24 md:pb-16 sm:max-w-3xl sm:px-6 lg:max-w-7xl lg:px-8">
-        <div class="lg:grid lg:grid-cols-2 lg:items-center lg:gap-24">
-            <div class="mt-12 grid grid-cols-2 gap-0.5 md:grid-cols-3 lg:mt-0 lg:grid-cols-2">
+        <div>
+            <h2 class="text-3xl font-bold tracking-tight text-center text-gray-900 dark:text-gray-50 sm:text-4xl">
+                {{ .Site.Params.P3.Heading }}
+            </h2>
+            {{ range .Site.Params.P3.Content }}
+            <p class="text-center max-w-3xl mt-6 text-lg leading-7 text-gray-900 dark:text-white">
+                <center>{{ .text }}</center>
+            </p>
+            {{ end }}
+            {{ range .Site.Params.P3.Links }}
+            <div class="my-6">
+                <a href="{{ .url }}" class="text-base font-medium text-primary-400 dark:text-primary-100">
+                    {{ .text }}&nbsp&rarr;
+                </a>
+            </div>
+            {{ end }}
+        </div>
+        <div class="lg:grid lg:grid-cols-1 lg:items-center lg:gap-24">
+            <div class="mt-12 grid grid-cols-2 gap-0.5 md:grid-cols-3 lg:mt-0 lg:grid-cols-3">
                 {{ range .Site.Params.P3.Logos }}
-                <div class="flex justify-center col-span-1 px-8 py-8 bg-gray-50 dark:bg-gray-900/10">
+                <div class="flex justify-center col-span-1 px-5 py-5 bg-gray-50 dark:bg-gray-900/10">
                     {{ if .image }}
                     {{ $sponsor := resources.Get .image }}
-                    <img src="{{ $sponsor.RelPermalink }}" class="max-h-12 dark:invert" alt="{{ .alt }}" loading="lazy" />
+                    {{ $sponsor := ($sponsor.Resize "400x400 webp q90") }}
+                    <img src="{{ $sponsor.RelPermalink }}" width="{{.Width}}" height="{{.height}}"  alt="{{ .alt }}" loading="lazy" />
                     {{ else }}
                     {{ $sponsor := resources.Get "images/global/sample-logo.svg" }}
                     <img src="{{ $sponsor.RelPermalink }}" class="max-h-12 dark:invert" alt="{{ .alt }}" loading="lazy" />
@@ -188,102 +228,11 @@
                 </div>
                 {{ end }}
             </div>
-            <div>
-                <h2 class="text-3xl font-bold tracking-tight text-gray-900 dark:text-gray-50 sm:text-4xl">
-                    {{ .Site.Params.P3.Heading }}
-                </h2>
-                {{ range .Site.Params.P3.Content }}
-                <p class="max-w-3xl mt-6 text-lg leading-7 text-gray-900 dark:text-white">
-                    {{ .text }}
-                </p>
-                {{ end }}
-                {{ range .Site.Params.P3.Links }}
-                <div class="my-6">
-                    <a href="{{ .url }}" class="text-base font-medium text-primary-400 dark:text-primary-100">
-                        {{ .text }}&nbsp&rarr;
-                    </a>
-                </div>
-                {{ end }}
-            </div>
+            
         </div>
     </div>
 
-    <!-- Blog section -->
-    <div class="relative px-1 pt-8 pb-4 bg-transparent lg:px-8 lg:pt-12 lg:mb-4 md:mt-12">
-        <div class="absolute inset-0">
-            <div class="bg-gray-200 dark:bg-gray-900/50 h-1/3 sm:h-2/3"></div>
-        </div>
-        <div class="relative px-2 mx-auto max-w-7xl">
-            <div class="text-center">
-                <h2 class="text-3xl font-black tracking-tight text-primary-500 dark:text-primary-300 sm:text-4xl">
-                    {{ .Site.Params.P4.Heading }}
-                </h2>
-                {{ range .Site.Params.P4.Content }}
-                <p class="max-w-2xl mx-auto mt-3 text-xl text-gray-500 dark:text-gray-300 sm:mt-4">
-                    {{ .text }}
-                </p>
-                {{ end }}
-            </div>
-
-            <div class="mx-auto text-gray-900 max-w-7xl dark:text-gray-50 md:px-1.5">
-                <div class="px-4 text-gray-900 dark:text-white not-prose dark:text-zinc-200">
-                    <div class="grid gap-4 mx-auto mt-12 mb-4 lg:max-w-none md:grid-cols-3">
-                        {{ range (.Paginator 3).Pages }}
-                        <div class="flex flex-col overflow-hidden rounded-lg shadow-lg bg-gray-50 dark:bg-gray-900">
-                            <a href="{{.Permalink}}">
-                                {{ with .Params.featured_image }}
-                                {{ with resources.Get . }}
-                                {{ $postimage := (.Resize "500x webp q90").RelPermalink }}
-                                <img src="{{ $postimage }}" class="object-fill overflow-hidden rounded-t-lg" width="100%" height="" loading="lazy" alt="{{ .Title }}" />
-
-                                {{ end }}
-                                {{ end }}
-                            </a>
-                            <div class="p-6">
-                                <div class="flex-1">
-                                    <a href="{{.Permalink}}" class="block mt-2 text-2xl font-black text-gray-900 dark:text-gray-200 hover:text-primary-600 dark:hover:text-primary-500 hover:underline">
-                                        {{ .Title }}
-                                    </a>
-                                    <p class="mt-3 text-base text-gray-900 dark:text-gray-300">
-                                        {{ .Params.summary }}
-                                    </p>
-                                </div>
-                                <div class="flex pt-6 font-medium text-primary-600 dark:text-primary-100 text-md">
-                                    <span class="pr-2 font-black">Tags:</span>
-                                    {{ range $elem_index, $elem_val := (.GetTerms "tags") }}
-                                    {{- if gt $elem_index 0 }}, {{ end -}}
-                                    <a href="{{ .Permalink }}" class="inline-flex items-center rounded-md bg-gray-300 hover:bg-primary-200 hover:text-black px-2.5 py-0.5 text-sm font-medium text-gray-900 ">{{ .LinkTitle }}</a>
-                                    {{- end -}}
-                                </div>
-                                <div class="flex items-center mt-6">
-                                    <div class="flex-shrink-0">
-                                        <span class="sr-only">{{ .Params.author }}</span>
-                                        {{ with .Params.authorimage }}
-                                        {{ with resources.Get . }}
-                                        {{ $authorimage := (.Resize "400x webp").RelPermalink }}
-                                        <img class="w-10 h-10 rounded-full" src="{{ $authorimage }}" alt="">
-                                        {{ end }}
-                                        {{ end }}
-                                    </div>
-                                    <div class="pt-1 ml-3">
-                                        <p class="text-sm font-medium text-gray-900 dark:text-white">
-                                            {{ .Params.author }}
-                                        </p>
-                                        <div class="flex space-x-1 text-sm text-gray-500 dark:text-white">
-                                            <time datetime="{{ .Date.Format "2006-01-02T15:04:05Z07:00" }}">{{ .Date.Format "2006-01-02" }}</time>
-                                            <span aria-hidden="true">&middot;</span>
-                                            <span>{{ math.Round (div (countwords .Content) 220.0) }} min read</span>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        {{ end }}
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
+    
 
 
     {{ if not .Site.Params.Disable_stay_uptodate}}
