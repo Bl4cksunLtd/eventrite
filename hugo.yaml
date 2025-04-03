@@ -47,8 +47,10 @@ markup:
       xhtml: false
 
 params:
+  logo: /images/site-logo.svg
   author: Martyn Weber
   authorimage: ../assets/images/global/author.webp
+  heroimage: "images/global/team.jpg" 
   og_image: /images/trailer.png
   moto: "Your Trusted Partner in Event & Licensed Premises Security"
   description: "At Eventrite, we specialize in providing professional manned guarding and state-of-the-art rapid deployment CCTV solutions for the event and licensed premises industry. With years of experience securing festivals, nightlife venues, and public events, we understand the unique challenges of crowd control, safety, and asset protection."
@@ -141,35 +143,77 @@ params:
         - text: "Available for V-Solar 6m or V-Mini Solar 2.3m or 3.4m."
         
   p1:
-    heading: "Manned Guarding"
-    image: "images/pages/manned-guarding.png"
+    heading: "Our Services"
+    image: "images/global/licensed-security.jpg"
     content:
-      - text: "Highly trained security professionals ensuring safety, crowd management, and access control at your event or venue."
+      - service:
+          head: "Manned Guarding"
+          text: "Highly trained security professionals ensuring safety, crowd management, and access control at your event or venue."
+      - service:
+          head: "Rapid Deployment CCTV"
+          text: "Advanced mobile surveillance units that can be deployed quickly, offering real-time monitoring and deterrence."
+      - service:
+          head: "Event Security Solutions"
+          text: "Tailored security strategies designed to protect your guests, staff, and assets while maintaining a positive atmosphere"
+      - service:
+          head: "Licensed Premises Security"
+          text: "Specialized security for bars, clubs, and licensed venues, ensuring compliance, safety, and customer peace of mind."
   p2:
-    heading: "Rapid Deployment CCTV"
-    image: "/images/pages/trailer.png"
+    heading: "Why Choose Eventrite?"
+    image: "images/global/trailer-inside.jpg"
     content:
-      - text: "Advanced mobile surveillance units that can be deployed quickly, offering real-time monitoring and deterrence."
+      - service:
+          head: "Industry Experts"
+          text: "Years of experience in event and venue security."
+      - service:
+          head: "Fast & Flexible Deployment"
+          text: "Security solutions tailored to your needs."
+      - service:
+          head: "24/7 Monitoring & Support" 
+          text: "Always on hand to keep your event secure."
+      - service:
+          head: "Trusted by Leading Events & Venues"
+          text: "A reputation built on reliability and professionalism."
+  p2a:
+    heading: "Event Security Solution"
+    image: "images/pages/site-security.png"
+    content:
+      - text: "Tailored security strategies designed to protect your guests, staff, and assets while maintaining a positive atmosphere."
+  p2b:
+    heading: "Licensed Premises Security"
+    image: "images/global/trailer inside.jpg"
+    content:
+      - text: "Specialized security for bars, clubs, and licensed venues, ensuring compliance, safety, and customer peace of mind."
   p3:
-    heading: "Backed by world-renowned investors"
+    heading: "Past Events"
     content:
-      - text: "Sagittis scelerisque nulla cursus in enim consectetur quam. Dictum urna sed consectetur neque tristique pellentesque. Blandit amet, sed aenean erat arcu morbi. Cursus faucibus nunc nisl netus morbi vel porttitor vitae ut. Amet vitae fames senectus vitae."
+      - text: "Some of our previous customers and events"
     links:
-      - text: Meet our investors and advisors
-        url: "#"
+   
     logos:
       - identifier: a
-        image: "images/global/sample-logo.svg"
-        alt: "a"
+        image: "images/global/bbc6music.jpg"
+        alt: "BBC 6 Music"
       - identifier: b
+        image: "images/global/dubbedout-soldout.jpg"
+        alt: "DubbedOut"
       - identifier: c
+        image: "images/global/forsaken-forest.jpg"
+        alt: "Forsaken Forest"
       - identifier: d
+        image: "images/global/maxines.jpg"
+        alt: "Maxines"
       - identifier: e
+        image: "images/global/rave-for-research.jpg"
+        alt: "Rave For Research"
       - identifier: f
+        image: "images/global/skiddle.jpg"
+        alt: "Skiddle"
+      
   p4:
-    heading: "From the blog"
+    heading: "Our Product Range"
     content:
-      - text: "Lorem ipsum dolor sit amet consectetur, adipisicing elit. Ipsa libero labore natus atque, ducimus sed."
+      - text: "A selection of products used in delivery of our services."
   p5:
     heading: "Get in touch"
     content:
@@ -209,65 +253,32 @@ menu:
       name: Home
       url: /
       weight: 10
-    - identifier: control
-      name: Control Centre
-      url: /rapid-eye/control/
+    - identifier: securityservices
+      name: Security Services
+      url: /security/
       weight: 20
     - identifier: rapid-eye
-      pre: dropdown
       name: Rapid Eye
       weight: 30
+      url: /rapid-eye/
     - identifier: contact
       name: Contact
       url: "/#cta"
       weight: 50
-  rapid-eye:
-    - identifier: summary
-      name: Summary
-      url: /rapid-eye/
-      weight: 10
-    - identifier: vsolar
-      name: V-Solar
-      url: /rapid-eye/vsolar/
-      weight: 20
-    - identifier: vmini
-      name: V-Mini
-      url: /rapid-eye/vmini/
-      weight: 30
-    - identifier: vguard
-      name: V-Guard
-      url: /rapid-eye/vguard/
-      weight: 40
-    - identifier: vceptor
-      name: V-Ceptor
-      url: /rapid-eye/vceptor/
-      weight: 50  
   
   footer:
     - identifier: home
       name: Home
       url: /
       weight: 10
-    - identifier: control
-      name: Control-Center
-      url: /rapid-eye/control/
+    - identifier: securityservices
+      name: "Security Services"
+      url: /security/
       weight: 20
-    - identifier: vsolar
-      name: V-Solar
-      url: /rapid-eye/vsolar/
+    - identifier: rapideye
+      name: "Rapid Eye"
+      url: /rapid-eye/
       weight: 30
-    - identifier: vmini
-      name: V-Mini
-      url: /rapid-eye/vmini/
-      weight: 40
-    - identifier: vguard
-      name: V-Guard
-      url: /rapid-eye/vguard/
-      weight: 50
-    - identifier: vceptor
-      name: V-Ceptor
-      url: /rapid-eye/vceptor/
-      weight: 60  
     - identifier: contact
       name: Contact
       url: "/#cta"
