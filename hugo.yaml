@@ -145,6 +145,7 @@ params:
   p1:
     heading: "Our Services"
     image: "images/global/licensed-security.jpg"
+    listimage: "images/global/white-tick-green.svg"
     content:
       - service:
           head: "Manned Guarding"
@@ -161,6 +162,7 @@ params:
   p2:
     heading: "Why Choose Eventrite?"
     image: "images/global/trailer-inside.jpg"
+    listimage: "images/global/white-tick-green.svg"
     content:
       - service:
           head: "Industry Experts"
