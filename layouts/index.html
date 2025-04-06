@@ -73,7 +73,7 @@
             <img srcset="
                 {{- with $thumb.RelPermalink -}}{{.}} 400w{{- end -}}
                 {{- with $large.RelPermalink -}}, {{.}} 576w{{- end -}}" src="{{ $hero.RelPermalink }}" width="100%" height="auto" alt="Eventrite hero image" class="rounded-lg bg-image" />
-            <div class="text-5xl lg:text-6xl sm:text-4xl text-gray-200 herocontent">
+            <div class="lg:text-6xl sm:text-4xl text-gray-200 herocontent">
                 <center>{{.Site.Params.Moto}}</center>
             </div>
         </div>
