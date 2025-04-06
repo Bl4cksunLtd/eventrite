@@ -5,8 +5,8 @@
                 <div class="verticalItemImage"> <img src="/images/site-logo.svg" class="transition-opacity h-full w-full group-hover:opacity-50 group-focus:opacity-70" alt="{{ .Site.Title }} Logo" /></div>
                 <div class="verticleItemText mt-6 ml-3 text-5xl font-bold tracking-tight text-gray-300  transition-colors group-hover:text-gray-400/60">
                     {{ .Site.Title }}
-                    <div class="mb-2 ml-3 text-3xl italic font-light tracking-tight text-gray-400 transition-colors group-hover:text-gray-200/60">
-                        {{.Title}}</div>
+                    <div class="mb-2 ml-3 text-3xl sm:text-2xl italic font-light tracking-tight text-gray-400 transition-colors group-hover:text-gray-200/60">
+                        {{cond (eq .Title "Eventrite") "Eventrite Security Services & Rapid Eye" .Title}}</div>
                 </div>
             </a>
             <button class="rounded-lg md:hidden focus:outline-none focus:shadow-outline" @click="open = !open" role="navigation" aria-expanded="false" aria-label="Main" aria-controls="menuItems">
