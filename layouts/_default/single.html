@@ -11,7 +11,6 @@
   <div class="max-w-2xl px-6 pt-6 pb-16 mx-auto prose dark:prose-invert dark:text-white">
     {{.Content}}
   </div>
-  
   <div class="relative my-4 {{.Params.style}}">
     <div class="lg:mx-auto lg:grid lg:max-w-7xl lg:grid-cols-2 lg:items-start lg:gap-24 lg:px-8">
         <div class="relative sm:py-8 lg:py-0">
@@ -70,7 +69,7 @@
   {{ with .Params.Technical}}
     <div class="max-w-4xl mx-auto mt-8 mb-2 bg-indigo-600 text-black dark:text-white rounded-2xl">
       <div class="px-6 text-lg mt-6 space-y-6 text-black dark:text-white prose">
-        <h3 class="py-8 text-4xl font-black text-left text-black dark:text-white capitalize ">Technical</h3>
+        <h3 class="py-8 text-4xl font-black text-left text-black dark:text-white capitalize ">{{$.Params.Technicalheader | default "Technical"}}</h3>
         <ul>
           {{ range .}}<li>{{ . }}</li>{{ end }}
         </ul>

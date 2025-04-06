@@ -26,7 +26,7 @@ params:
         "Option to install Spirafix ground anchor for additional hold",
         "Option to add quad solar panel arrangement for extended Winter use"
     ]
-    bulletfooter: "Our trailer is more than capable of dealing with everything from small events to large scale festivals, working with the V-Ceptor range of towers we can provide a seamless option of CCTV monitoring"
+    bulletfooter: 
     bulletimage: "images/screens.png"
     stars: [
         "V-Solar Tower operation is sunlight dependent and may require additional methods of power support during Winter months (quad solar panel arrangement available)",

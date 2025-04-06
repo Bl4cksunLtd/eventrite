@@ -257,7 +257,7 @@ menu:
       weight: 10
     - identifier: securityservices
       name: Security Services
-      url: /security/
+      url: /security/services
       weight: 20
     - identifier: rapid-eye
       name: Rapid Eye
@@ -275,7 +275,7 @@ menu:
       weight: 10
     - identifier: securityservices
       name: "Security Services"
-      url: /security/
+      url: /security/services/
       weight: 20
     - identifier: rapideye
       name: "Rapid Eye"
