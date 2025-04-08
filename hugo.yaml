@@ -61,8 +61,9 @@ params:
   consent:
     - title: Google Anaytics (functional)
       description: We use cookies to help us improve our website, allowing us to understand the number of people that visit our website, where they are from and what they are clicking on. We follow the guidelines of the EU and GDPR, which describe how to use Google Analytics without requiring explicit consent.
-      is_functional: true
+      is_functional: false
       script_file: ga.js
+      GoogleAnalyticsId: G-TDF3EMNYJM
     
   rapideye:
     - Product: CCTV
@@ -242,8 +243,7 @@ params:
       url: 'https://twitter.com/nusserstudios'
     phone:
       enabled: true
-      text: "0800 246 5857"
-      url: "tel:0800 246 5857"
+      number: "0800 246 5857"
     email:
       enabled: true
       text: "info@eventrite.uk"
