@@ -57,7 +57,8 @@ params:
   intro: "Rapid deployment CCTV control room"
   disable_theme_toggle: false
   disable_stay_uptodate: false
- 
+  GoogleAnalyticsId: G-TDF3EMNYJM
+
   consent:
     - title: Google Anaytics (functional)
       description: We use cookies to help us improve our website, allowing us to understand the number of people that visit our website, where they are from and what they are clicking on. We follow the guidelines of the EU and GDPR, which describe how to use Google Analytics without requiring explicit consent.
