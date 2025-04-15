@@ -67,11 +67,16 @@
     <div class="bg-gray-700 herocontainer">
         <div>
             {{ $hero := resources.GetMatch "images/global/site-logo.jpg" }}
-            {{ $thumb := ($hero.Resize "700x400 webp q90") }}
-            {{ $large := ($hero.Resize "1006x576 webp q90") }}
+            {{ $thumb := ($hero.Resize "350x200 webp q90") }}
+            {{ $large := ($hero.Resize "503x288 webp q90") }}
+            {{ $xllarge := ($hero.Resize "1006x576 webp q90") }}
             <img srcset="
-                {{- with $thumb.RelPermalink -}}{{.}} 700w{{- end -}}
-                {{- with $large.RelPermalink -}}, {{.}} 1006w{{- end -}}" src="{{ $hero.RelPermalink }}" width="{{$hero.Width}}" height="auto" alt="Eventrite hero image" class="rounded-lg bg-image" />
+                {{- with $thumb.RelPermalink -}}{{.}} 350w{{- end -}}
+                {{- with $large.RelPermalink -}}, {{.}} 503w{{- end -}}
+                {{- with $xllarge.RelPermalink -}}, {{.}} 1006w{{- end -}}
+                "
+                sizes="(max-width:400px) 350px, (max-width:600px) 503px, (max-width:1080px) 1006px, 1006px"
+                src="{{ $hero.RelPermalink }}"  alt="Eventrite hero image" class="rounded-lg bg-image" />
             <div class="lg:text-6xl sm:text-4xl text-gray-200 herocontent">
                 <center>{{.Site.Params.Moto}}</center>
             </div>
