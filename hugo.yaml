@@ -4,7 +4,7 @@ languageCode: en-gb
 DefaultContentLanguage: en
 enableEmoji: true
 enableGitInfo: true
-enableRobotsTXT: true
+enableRobotsTXT: false
 canonifyURLs: true
 pagination:
   pagerSize: 6
