@@ -1,0 +1,6 @@
+# robots.txt for eventrite.services
+
+User-agent: *
+Allow: /
+
+Sitemap: https://eventrite.services/sitemap.xml
