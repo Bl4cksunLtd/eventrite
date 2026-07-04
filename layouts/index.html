@@ -97,15 +97,28 @@
                     </p>
                 </div>
                 <div class="col-span-6">
-                    {{ $hero := resources.GetMatch .Site.Params.Heroimage }}
+                    {{ if .Site.Params.HeroVideoId }}
+                        <!-- 1. Show Video if HeroVideoId exists -->
+                        <div class="w-full max-w-xl mx-auto aspect-video rounded-lg overflow-hidden shadow-md">
+                            <iframe class="w-full h-full"
+                                    src="https://youtube.com/embed/{{ .Site.Params.HeroVideoId }}" 
+                                    title="{{ .Site.Params.Heading }} video" 
+                                    frameborder="0" 
+                                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
+                                    allowfullscreen>
+                            </iframe>
+                        </div>
+                    {{ else }}
+                        {{ $hero := resources.GetMatch .Site.Params.Heroimage }}
 
-                    {{ $thumb := ($hero.Resize "533x400 webp q90") }}
-                    {{ $large := ($hero.Resize "768x576 webp q90") }}
+                        {{ $thumb := ($hero.Resize "533x400 webp q90") }}
+                        {{ $large := ($hero.Resize "768x576 webp q90") }}
 
-                    <img srcset="
-                        {{- with $thumb.RelPermalink -}}{{.}} 400w{{- end -}}
-                        {{- with $large.RelPermalink -}}, {{.}} 576w{{- end -}}" 
-                        src="{{ $hero.RelPermalink }}" width="{{$hero.Width}}" height="{{$hero.Height}}" alt="{{.Site.Params.Heading}} image" class="w-full max-w-xl mx-auto rounded-lg"  />
+                        <img srcset="
+                            {{- with $thumb.RelPermalink -}}{{.}} 400w{{- end -}}
+                            {{- with $large.RelPermalink -}}, {{.}} 576w{{- end -}}" 
+                            src="{{ $hero.RelPermalink }}" width="{{$hero.Width}}" height="{{$hero.Height}}" alt="{{.Site.Params.Heading}} image" class="w-full max-w-xl mx-auto rounded-lg"  />
+                    {{ end }}
                 </div>
             </div>
         </div>
