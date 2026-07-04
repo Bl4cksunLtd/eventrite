@@ -47,10 +47,12 @@ markup:
       xhtml: false
 
 params:
-  logo: /images/site-logo.svg
+  logo: /images/site-logo.png
   author: Martyn Weber
   authorimage: ../assets/images/global/author.webp
   heroimage: "images/global/team.jpg" 
+  HeroVideoId: "96lHukIQaU4"
+  favicon: /favicon.ico
   og_image: /images/trailer.png
   moto: "Your Trusted Partner in Event & Licensed Premises Security"
   description: "At Eventrite, we specialize in providing professional manned guarding and state-of-the-art rapid deployment CCTV solutions for the event and licensed premises industry. With years of experience securing festivals, nightlife venues, and public events, we understand the unique challenges of crowd control, safety, and asset protection."
@@ -258,12 +260,12 @@ menu:
       weight: 10
     - identifier: securityservices
       name: Security Services
-      url: /security/services
+      url: https://security.eventrite.services/
       weight: 20
     - identifier: rapid-eye
       name: Rapid Eye
       weight: 30
-      url: /rapid-eye/
+      url: https://rapideye.eventrite.services/
     - identifier: contact
       name: Contact
       url: "/#cta"
@@ -276,11 +278,11 @@ menu:
       weight: 10
     - identifier: securityservices
       name: "Security Services"
-      url: /security/services/
+      url: https://security.eventrite.services/
       weight: 20
     - identifier: rapideye
       name: "Rapid Eye"
-      url: /rapid-eye/
+      url: https://rapideye.eventrite.services/
       weight: 30
     - identifier: contact
       name: Contact
